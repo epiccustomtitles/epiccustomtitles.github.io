@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EpicCustomTitles | Custom Wrestling & Championship Belt Manufacturers</title>
+  <meta name="description" content="Handcrafted custom championship belts, TV replica wrestling titles, MMA belts, and corporate award titles. Deep-etched CNC brass plates & genuine cowhide leather." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #09090b;
+      --bg-card: #121216;
+      --bg-elevated: #18181f;
+      --gold-primary: #d4af37;
+      --gold-light: #f3e5ab;
+      --gold-dark: #996515;
+      --text-main: #f4f4f5;
+      --text-muted: #a1a1aa;
+      --border-subtle: rgba(212, 175, 55, 0.22);
+      --wa-green: #25d366;
+      --wa-dark: #128c7e;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, .brand-font { font-family: 'Cinzel', serif; letter-spacing: 0.04em; }
+
+    /* Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(9, 9, 11, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .nav-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+    .logo-top {
+      font-family: 'Cinzel', serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold-primary), var(--gold-dark));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1;
+    }
+    .logo-sub {
+      font-size: 0.68rem;
+      letter-spacing: 0.28em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    nav a {
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.25s;
+    }
+    nav a:hover { color: var(--gold-primary); }
+    .nav-wa-btn {
+      background: linear-gradient(135deg, var(--wa-green), var(--wa-dark));
+      color: #fff;
+      padding: 0.55rem 1.1rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .nav-wa-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding: 6rem 1.5rem 5rem;
+      text-align: center;
+      background: radial-gradient(circle at top center, rgba(212, 175, 55, 0.14), transparent 65%);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--border-subtle);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gold-primary);
+      background: rgba(212, 175, 55, 0.06);
+      margin-bottom: 1.4rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 800;
+      max-width: 900px;
+      margin: 0 auto 1.2rem;
+      line-height: 1.15;
+    }
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto 2.2rem;
+      color: var(--text-muted);
+      font-size: 1.08rem;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+      color: #09090b;
+      padding: 0.9rem 1.8rem;
+      border-radius: 6px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.35);
+    }
+    .btn-outline {
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-light);
+      padding: 0.9rem 1.8rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95rem;
+      background: transparent;
+      transition: background 0.2s;
+    }
+    .btn-outline:hover { background: rgba(212, 175, 55, 0.1); }
+
+    /* Stats Strip */
+    .stats-bar {
+      max-width: 1140px;
+      margin: 3.5rem auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .stat-item h3 {
+      font-size: 1.8rem;
+      color: var(--gold-primary);
+    }
+    .stat-item p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Sections */
+    section {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 5rem 1.5rem;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-header h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      margin-bottom: 0.75rem;
+    }
+    .section-header p {
+      color: var(--text-muted);
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    /* Filter Tabs */
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .filter-btn {
+      background: var(--bg-card);
+      color: var(--text-muted);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 0.6rem 1.25rem;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: all 0.25s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--gold-primary);
+      color: #09090b;
+      border-color: var(--gold-primary);
+      font-weight: 600;
+    }
+
+    /* Product Grid */
+    .belt-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.75rem;
+    }
+    .belt-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s, border-color 0.25s;
+    }
+    .belt-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold-primary);
+    }
+    .belt-img-wrap {
+      position: relative;
+      height: 230px;
+      background: #18181f;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .belt-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s;
+    }
+    .belt-card:hover .belt-img-wrap img {
+      transform: scale(1.05);
+    }
+    .price-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(9, 9, 11, 0.88);
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-light);
+      padding: 0.35rem 0.8rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .belt-info {
+      padding: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .belt-tag {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold-primary);
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .belt-info h3 {
+      font-size: 1.18rem;
+      margin-bottom: 0.5rem;
+    }
+    .belt-info p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+    .belt-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+    }
+    .btn-card-wa {
+      background: var(--wa-green);
+      color: #052e16;
+      border: none;
+      padding: 0.65rem 0.75rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .btn-card-wa:hover { opacity: 0.9; }
+    .btn-card-quote {
+      background: transparent;
+      color: var(--gold-light);
+      border: 1px solid var(--border-subtle);
+      padding: 0.65rem 0.75rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-card-quote:hover { background: rgba(212, 175, 55, 0.12); }
+
+    /* Specs Grid */
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .spec-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 1.8rem;
+    }
+    .spec-card h3 {
+      color: var(--gold-primary);
+      font-size: 1.15rem;
+      margin-bottom: 0.65rem;
+    }
+    .spec-card p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    /* Quote Form & Contact */
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 2.5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 2.5rem;
+    }
+    .contact-details h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--gold-light);
+    }
+    .contact-item {
+      margin-top: 1.4rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .contact-item span {
+      display: block;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold-primary);
+      margin-bottom: 0.25rem;
+    }
+    .contact-item a {
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 500;
+    }
+    .contact-item a:hover { color: var(--gold-primary); }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .form-group.full { grid-column: 1 / -1; }
+    label {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+    input, select, textarea {
+      background: var(--bg-elevated);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--text-main);
+      padding: 0.75rem 0.9rem;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.92rem;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--gold-primary);
+    }
+    .form-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 1rem;
+    }
+    .btn-wa-submit {
+      background: var(--wa-green);
+      color: #052e16;
+      border: none;
+      padding: 0.9rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.95rem;
+      flex: 1;
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-wa {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--wa-green);
+      color: #052e16;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.85rem;
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+      z-index: 999;
+      transition: transform 0.2s;
+    }
+    .floating-wa:hover { transform: scale(1.08); }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+    footer a { color: var(--gold-primary); text-decoration: none; }
+
+    @media (max-width: 860px) {
+      nav ul { display: none; }
+      .contact-wrapper { grid-template-columns: 1fr; padding: 1.5rem; }
+      .form-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-top">EPIC</span>
+        <span class="logo-sub">Custom Titles</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#catalog">Belts & Replicas</a></li>
+          <li><a href="#craft">Craftsmanship</a></li>
+          <li><a href="#quote">Custom Order</a></li>
+        </ul>
+      </nav>
+      <a href="https://wa.me/923121793334?text=Hello%20EpicCustomTitles!%20I%20would%20like%20to%20inquire%20about%20a%20championship%20belt." target="_blank" class="nav-wa-btn">
+        WhatsApp: +92 312 1793334
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <span class="hero-badge">Direct Manufacturer • Worldwide Express Shipping</span>
+    <h1>Heavyweight <span>Championship Belts</span> Forged For Legends</h1>
+    <p>Custom wrestling titles, TV-accurate replica belts, MMA championships, and corporate awards handcrafted with 4mm–6mm CNC brass plates and genuine cowhide leather.</p>
+    <div class="hero-actions">
+      <a href="#catalog" class="btn-gold">Browse Belts & Prices</a>
+      <a href="https://wa.me/923121793334?text=Hi%20EpicCustomTitles,%20I%20want%20to%20design%20a%20custom%20championship%20belt." target="_blank" class="btn-outline">Chat on WhatsApp</a>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat-item">
+        <h3>4mm–6mm</h3>
+        <p>Deep-Etched & CNC Brass Plates</p>
+      </div>
+      <div class="stat-item">
+        <h3>100%</h3>
+        <p>Hand-Tooled Cowhide Leather</p>
+      </div>
+      <div class="stat-item">
+        <h3>24K Gold</h3>
+        <p>Dual-Tone & Nickel Electroplating</p>
+      </div>
+      <div class="stat-item">
+        <h3>DHL / FedEx</h3>
+        <p>Tracked Worldwide Delivery</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Catalog -->
+  <section id="catalog">
+    <div class="section-header">
+      <h2>Championship & Replica Catalog</h2>
+      <p>Order ready-made classics or customize any title with your promotion logo, nameplates, and leather color.</p>
+    </div>
+
+    <div class="filter-tabs">
+      <button class="filter-btn active" onclick="filterBelts('all', this)">All Titles</button>
+      <button class="filter-btn" onclick="filterBelts('replica', this)">TV Replica Belts</button>
+      <button class="filter-btn" onclick="filterBelts('custom', this)">Custom Wrestling</button>
+      <button class="filter-btn" onclick="filterBelts('mma', this)">MMA & Combat</button>
+      <button class="filter-btn" onclick="filterBelts('award', this)">Fantasy & Corporate</button>
+    </div>
+
+    <div class="belt-grid" id="beltGrid">
+
+      <!-- Card 1 -->
+      <div class="belt-card" data-category="replica">
+        <div class="belt-img-wrap">
+          <img src="images/belt1.jpg" alt="Winged Eagle Replica Championship Belt" onerror="this.src='https://placehold.co/600x400/18181f/d4af37?text=Upload+images/belt1.jpg'">
+          <span class="price-badge">$280 USD</span>
+        </div>
+        <div class="belt-info">
+          <span class="belt-tag">TV Replica • 4mm Brass</span>
+          <h3>Winged Eagle World Title</h3>
+          <p>Classic dual-plated gold & silver deep-etched brass plates mounted on soft black cowhide leather.</p>
+          <div class="belt-actions">
+            <button class="btn-card-wa" onclick="orderWhatsApp('Winged Eagle World Title', '$280')">WhatsApp Order</button>
+            <button class="btn-card-quote" onclick="selectForQuote('Winged Eagle World Title ($280)')">Customize</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="belt-card" data-category="replica">
+        <div class="belt-img-wrap">
+          <img src="images/belt2.jpg" alt="Big Gold World Heavyweight Replica Belt" onerror="this.src='https://placehold.co/600x400/18181f/d4af37?text=Upload+images/belt2.jpg'">
+          <span class="price-badge">$310 USD</span>
+        </div>
+        <div class="belt-info">
+          <span class="belt-tag">TV Replica • Curved Plates</span>
+          <h3>Big Gold World Heavyweight</h3>
+          <p>Authentic curved 4mm zinc/brass relief detailing with red gemstone accents and custom nameplate.</p>
+          <div class="belt-actions">
+            <button class="btn-card-wa" onclick="orderWhatsApp('Big Gold World Heavyweight', '$310')">WhatsApp Order</button>
+            <button class="btn-card-quote" onclick="selectForQuote('Big Gold World Heavyweight ($310)')">Customize</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="belt-card" data-category="replica">
+        <div class="belt-img-wrap">
+          <img src="images/belt3.jpg" alt="Undisputed World Wrestling Title" onerror="this.src='https://placehold.co/600x400/18181f/d4af37?text=Upload+images/belt3.jpg'">
+          <span class="price-badge">$340 USD</span>
+        </div>
+        <div class="belt-info">
+          <span class="belt-tag">TV Replica • Cubic Zirconia</span>
+          <h3>Undisputed World Title</h3>
+          <p>Heavyweight CNC-machined plates encrusted with hand-set cubic zirconia stones and removable side plates.</p>
+          <div class="belt-actions">
+            <button class="btn-card-wa" onclick="orderWhatsApp('Undisputed World Title', '$340')">WhatsApp Order</button>
+            <button class="btn-card-quote" onclick="selectForQuote('Undisputed World Title ($340)')">Customize</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="belt-card" data-category="custom">
+        <div class="belt-img-wrap">
+          <img src="images/belt4.jpg" alt="Custom Promotion Heavyweight Belt" onerror="this.src='https://placehold.co/600x400/18181f/d4af37?text=Upload+images/belt4.jpg'">
+          <span class="price-badge">$360 USD</span>
+        </div>
+        <div class="belt-info">
+          <span class="belt-tag">100% Custom • Free 3D Mockup</span>
+          <h3>Custom Promotion World Title</h3>
+          <p>Built from scratch with your federation logo, custom side plates, and choice of strap color.</p>
+          <div class="belt-actions">
+            <button class="btn-card-wa" onclick="orderWhatsApp('Custom Promotion World Title', '$360')">WhatsApp Order</button>
+            <button class="btn-card-quote" onclick="selectForQuote('Custom Promotion World Title ($360)')">Customize</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="belt-card" data-category="custom">
+        <div class="belt-img-wrap">
+          <img src="images/belt5.jpg" alt="Custom Tag Team Championship Belts" onerror="this.src='https://placehold.co/600x400/18181f/d4af37?text=Upload+images/belt5.jpg'">
+          <span class="price-badge">$620 / Pair</span>
+        </div>
+        <div class="belt-info">
+          <span class="belt-tag">Set of 2 Belts • Tag Team</span>
+          <h3>Custom Tag Team Titles (Pair)</h3>
+          <p>Matching pair of heavyweight tag team championships with deep-etched brass and gold/nickel plating.</p>
+          <div class="belt-actions">
+            <button class="btn-card-wa" onclick="orderWhatsApp('Custom Tag Team Titles (Pair)', '$620')">WhatsApp Order</button>
+            <button class="btn-card-quote" onclick="selectForQuote('Custom Tag Team Titles Pair ($620)')">Customize</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="belt-card" data-category="mma">
+        <div class="belt-img-wrap">
+          <img src="images/belt6.jpg" alt="Custom MMA & Boxing Championship Belt" onerror="this.src='https://placehold.co/600x400/18181f/d4af37?text=Upload+images/belt6.jpg'">
+          <span class="price-badge">$350 USD</span>
+        </div>
+        <div class="belt-info">
+          <span class="belt-tag">MMA / Boxing / Muay Thai</span>
+          <h3>Pro Combat Championship Belt</h3>
+          <p>Oversized 5-plate octagon-inspired title designed for MMA promotions, boxing events, and fight nights.</p>
+          <div class="belt-actions">
+            <button class="btn-card-wa" onclick="orderWhatsApp('Pro Combat Championship Belt', '$350')">WhatsApp Order</button>
+            <button class="btn-card-quote" onclick="selectForQuote('Pro Combat Championship Belt ($350)')">Customize</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="belt-card" data-category="award">
+        <div class="belt-img-wrap">
+          <img src="images/belt7.jpg" alt="Fantasy Football Championship Belt" onerror="this.src='https://placehold.co/600x400/18181f/d4af37?text=Upload+images/belt7.jpg'">
+          <span class="price-badge">$270 USD</span>
+        </div>
+        <div class="belt-info">
+          <span class="belt-tag">Fantasy Sports • Yearly Plates</span>
+          <h3>Fantasy League Champion Belt</h3>
+          <p>Includes custom league logo center plate plus interchangeable side plates for yearly winner engraving.</p>
+          <div class="belt-actions">
+            <button class="btn-card-wa" onclick="orderWhatsApp('Fantasy League Champion Belt', '$270')">WhatsApp Order</button>
+            <button class="btn-card-quote" onclick="selectForQuote('Fantasy League Champion Belt ($270)')">Customize</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="belt-card" data-category="award">
+        <div class="belt-img-wrap">
+          <img src="images/belt8.jpg" alt="Corporate Sales & eSports Trophy Belt" onerror="this.src='https://placehold.co/600x400/18181f/d4af37?text=Upload+images/belt8.jpg'">
+          <span class="price-badge">$290 USD</span>
+        </div>
+        <div class="belt-info">
+          <span class="belt-tag">Corporate & eSports Awards</span>
+          <h3>Corporate MVP & eSports Title</h3>
+          <p>Turn top sales performers or tournament champions into legends with your full-color company emblem.</p>
+          <div class="belt-actions">
+            <button class="btn-card-wa" onclick="orderWhatsApp('Corporate MVP & eSports Title', '$290')">WhatsApp Order</button>
+            <button class="btn-card-quote" onclick="selectForQuote('Corporate MVP & eSports Title ($290)')">Customize</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Craftsmanship Specs -->
+  <section id="craft">
+    <div class="section-header">
+      <h2>Factory-Direct Manufacturing Standards</h2>
+      <p>Every belt is handcrafted by master engravers and leather artisans before undergoing multi-point quality inspection.</p>
+    </div>
+    <div class="specs-grid">
+      <div class="spec-card">
+        <h3>1. Heavyweight Metal Plates</h3>
+        <p>Choose between 2mm, 4mm, or 6mm solid brass or zinc alloy plates with deep chemical etching or 3D CNC relief engraving.</p>
+      </div>
+      <div class="spec-card">
+        <h3>2. Real Cowhide Leather Straps</h3>
+        <p>Hand-cut 100% genuine vegetable-tanned cowhide leather with custom tooling, stitched borders, and heavy-duty snap fasteners.</p>
+      </div>
+      <div class="spec-card">
+        <h3>3. Free Digital 3D Artwork</h3>
+        <p>Send us a rough sketch or logo on WhatsApp or email—our design team creates a full production mockup before crafting begins.</p>
+      </div>
+      <div class="spec-card">
+        <h3>4. Worldwide Express Shipping</h3>
+        <p>Fast, insured door-to-door shipping via DHL and FedEx to the USA, UK, Canada, Europe, South Africa, and worldwide.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote & Direct Contact -->
+  <section id="quote">
+    <div class="contact-wrapper">
+      <div class="contact-details">
+        <h3>Start Your Custom Title</h3>
+        <p style="color: var(--text-muted);">Send your logo, belt idea, or replica inquiry directly to our workshop. We reply within a few hours with pricing and a digital design preview.</p>
+
+        <div class="contact-item">
+          <span>Direct WhatsApp & Calls</span>
+          <a href="https://wa.me/923121793334" target="_blank">+92 312 1793334</a>
+        </div>
+
+        <div class="contact-item">
+          <span>Official Business Email</span>
+          <a href="mailto:epiccustomtitles@gmail.com">epiccustomtitles@gmail.com</a>
+        </div>
+
+        <div class="contact-item">
+          <span>Production & Delivery Time</span>
+          <p style="color: var(--text-main); font-size: 0.95rem;">10–14 Business Days Crafting + 4–6 Days Express Shipping</p>
+        </div>
+      </div>
+
+      <form id="quoteForm" onsubmit="submitToWhatsApp(event)">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="custName">Your Name *</label>
+            <input type="text" id="custName" required placeholder="John Doe" />
+          </div>
+          <div class="form-group">
+            <label for="custEmail">Your Email *</label>
+            <input type="email" id="custEmail" required placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="beltType">Belt Category *</label>
+            <select id="beltType">
+              <option value="Custom Wrestling Belt">Custom Wrestling Belt</option>
+              <option value="TV Replica Belt">TV Replica Belt</option>
+              <option value="MMA / Boxing Belt">MMA / Boxing Belt</option>
+              <option value="Fantasy / Corporate Belt">Fantasy / Corporate Belt</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="strapColor">Leather Strap Color</label>
+            <select id="strapColor">
+              <option value="Classic Black">Classic Black</option>
+              <option value="Championship White">Championship White</option>
+              <option value="Crimson Red">Crimson Red</option>
+              <option value="Royal Blue">Royal Blue</option>
+              <option value="Custom Color">Custom Color</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="beltNotes">Design Details / Selected Title *</label>
+            <textarea id="beltNotes" rows="4" required placeholder="Tell us about your logo, text on plates, plate thickness (2mm/4mm), or shipping country..."></textarea>
+          </div>
+        </div>
+        <div class="form-buttons">
+          <button type="submit" class="btn-wa-submit">Send Inquiry via WhatsApp</button>
+          <button type="button" class="btn-outline" onclick="sendViaEmail()">Send via Email</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/923121793334?text=Hello%20EpicCustomTitles!%20I%20have%20a%20question%20about%20a%20belt." target="_blank" class="floating-wa" title="Chat on WhatsApp">
+    WA
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 <strong>EpicCustomTitles</strong> (`epiccustomtitles.github.io`). All Rights Reserved.</p>
+    <p style="margin-top: 0.4rem;">
+      Email: <a href="mailto:epiccustomtitles@gmail.com">epiccustomtitles@gmail.com</a> &bull;
+      WhatsApp: <a href="https://wa.me/923121793334" target="_blank">+92 312 1793334</a>
+    </p>
+  </footer>
+
+  <script>
+    const WA_NUMBER = "923121793334";
+    const BUSINESS_EMAIL = "epiccustomtitles@gmail.com";
+
+    function filterBelts(category, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.belt-card').forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function orderWhatsApp(title, price) {
+      const msg = `Hello EpicCustomTitles! I want to order/inquire about:\n• Title: ${title}\n• Listed Price: ${price}\nPlease share payment & shipping details.`;
+      window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    function selectForQuote(titleInfo) {
+      document.getElementById('beltNotes').value = `Interested in: ${titleInfo}\nCustomizations needed: `;
+      document.getElementById('quote').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function submitToWhatsApp(e) {
+      e.preventDefault();
+      const name = document.getElementById('custName').value;
+      const email = document.getElementById('custEmail').value;
+      const type = document.getElementById('beltType').value;
+      const color = document.getElementById('strapColor').value;
+      const notes = document.getElementById('beltNotes').value;
+
+      const text = `*New Quote Request - EpicCustomTitles*\n` +
+                   `• Name: ${name}\n` +
+                   `• Email: ${email}\n` +
+                   `• Belt Type: ${type}\n` +
+                   `• Leather Color: ${color}\n` +
+                   `• Details: ${notes}`;
+
+      window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
+    }
+
+    function sendViaEmail() {
+      const name = document.getElementById('custName').value || 'Customer';
+      const email = document.getElementById('custEmail').value || '';
+      const type = document.getElementById('beltType').value;
+      const color = document.getElementById('strapColor').value;
+      const notes = document.getElementById('beltNotes').value || 'Please send me a quote.';
+
+      const subject = `Custom Belt Quote Inquiry - ${type} (${name})`;
+      const body = `Name: ${name}\nEmail: ${email}\nBelt Type: ${type}\nLeather Color: ${color}\n\nDetails:\n${notes}`;
+
+      window.location.href = `mailto:${BUSINESS_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+  </script>
+</body>
+</html>
